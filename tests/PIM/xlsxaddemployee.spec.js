@@ -14,22 +14,22 @@ test.beforeEach(async ({ page }) => {
 test("verify add employee-xlsx", async ({ page }) => {
     const workbook = new ExcelJS.Workbook();
 
-  await workbook.xlsx.readFile(
-    path.join(__dirname, '../../testdata/EmployeeData.xlsx')
-  );
+    await workbook.xlsx.readFile(
+        path.join(__dirname, '../../testdata/EmployeeData.xlsx')
+    );
 
-  const worksheet = workbook.getWorksheet(1);
+    const worksheet = workbook.getWorksheet(1);
 
-// Read row 2 (first data row)
-const row = worksheet.getRow(2);
+    // Read row 2 (first data row)
+    const row = worksheet.getRow(2);
 
-const firstName = row.getCell(1).text;
-const lastName = row.getCell(2).text;
+    const firstName = row.getCell(1).text;
+    const lastName = row.getCell(2).text;
 
-console.log(firstName); // Madhu
-console.log(lastName);  // K
+    console.log(firstName);
+    console.log(lastName);
 
-   
+
     await page.locator("//span[text()='PIM']").click();
     await page.locator("//h5[text()='Employee Information']").textContent("Employee Information")
     await page.getByRole('button', { name: 'Add' }).click()
