@@ -9,6 +9,7 @@
 # package-lock.json
 
 # Playwright
+/package-lock.json/
 node_modules/
 /test-results/
 /playwright-report/
@@ -16,7 +17,7 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 .playwright-mcp/
-package-lock.json
+
 preprod.playwright.config.js
 tests/screenshots
 allure-report
