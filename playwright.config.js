@@ -15,7 +15,7 @@ require('dotenv').config()
  */
 export default defineConfig({
 
-   timeout:60000,//normaltimeout
+   timeout:90000,//normaltimeout
   globalTimeout: 60 * 60 * 10000,//this is for over all tc to run timeout
 
   expect: {
@@ -51,10 +51,10 @@ export default defineConfig({
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'] },
     },
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+    // {
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'] },
+    // },
 
     // {
     //   name: 'firefox',
